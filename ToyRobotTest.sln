@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobotTest.App", "ToyRobotTest.App\ToyRobotTest.App.csproj", "{F2FBA086-0C33-45B6-A345-F6E5B5F1E8FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobotTest.Services", "ToyRobotTest.Services\ToyRobotTest.Services.csproj", "{FDB05EF3-86C7-4921-BE7B-BED41C57689D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2FBA086-0C33-45B6-A345-F6E5B5F1E8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FBA086-0C33-45B6-A345-F6E5B5F1E8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FBA086-0C33-45B6-A345-F6E5B5F1E8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FBA086-0C33-45B6-A345-F6E5B5F1E8FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB05EF3-86C7-4921-BE7B-BED41C57689D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB05EF3-86C7-4921-BE7B-BED41C57689D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB05EF3-86C7-4921-BE7B-BED41C57689D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB05EF3-86C7-4921-BE7B-BED41C57689D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
