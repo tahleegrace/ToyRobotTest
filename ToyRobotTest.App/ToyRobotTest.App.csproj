@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ToyRobotTest.Services\ToyRobotTest.Services.csproj">
+      <Project>{fdb05ef3-86c7-4921-be7b-bed41c57689d}</Project>
+      <Name>ToyRobotTest.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
