@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobotTest.App", "ToyRobo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobotTest.Services", "ToyRobotTest.Services\ToyRobotTest.Services.csproj", "{FDB05EF3-86C7-4921-BE7B-BED41C57689D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobotTest.Services.Tests", "ToyRobotTest.Services.Tests\ToyRobotTest.Services.Tests.csproj", "{6E9956EB-DF3A-4052-99DD-FABBFEDC9D20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FDB05EF3-86C7-4921-BE7B-BED41C57689D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDB05EF3-86C7-4921-BE7B-BED41C57689D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDB05EF3-86C7-4921-BE7B-BED41C57689D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9956EB-DF3A-4052-99DD-FABBFEDC9D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9956EB-DF3A-4052-99DD-FABBFEDC9D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9956EB-DF3A-4052-99DD-FABBFEDC9D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9956EB-DF3A-4052-99DD-FABBFEDC9D20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
