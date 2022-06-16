@@ -11,8 +11,8 @@ namespace ToyRobotTest.Services
         // the toy robot and table would be in separate classes.
         private const string InvalidCommandText = "Invalid command";
 
-        public int X { get; private set; }
-        public int Y { get; private set; }
+        public int X { get; private set; } = 0;
+        public int Y { get; private set; } = 0;
         public bool IsPlacedOnTable { get; private set; }
         public Orientation Orientation { get; private set; }
         public int TableWidth => 6;
@@ -25,14 +25,14 @@ namespace ToyRobotTest.Services
         {
             if (commandParts.Length < 2)
             {
-                return "Please provide X and Y coordinates and an optional orientation";
+                return "Please provide X and Y coordinates and an orientation if the robot is not on the table yet";
             }
 
             string[] arguments = commandParts[1].Split(',');
 
             if (arguments.Length < 2)
             {
-                return "Please provide X and Y coordinates";
+                return "Please provide X and Y coordinates and an orientation if the robot is not on the table yet";
             }
 
             int x;
@@ -121,14 +121,14 @@ namespace ToyRobotTest.Services
                 case Orientation.North:
                     this.Orientation = Orientation.East;
                     break;
-                case Orientation.East:
-                    this.Orientation = Orientation.South;
+                case Orientation.West:
+                    this.Orientation = Orientation.North;
                     break;
                 case Orientation.South:
                     this.Orientation = Orientation.West;
                     break;
-                case Orientation.West:
-                    this.Orientation = Orientation.North;
+                case Orientation.East:
+                    this.Orientation = Orientation.South;
                     break;
             }
         }
@@ -164,7 +164,7 @@ namespace ToyRobotTest.Services
 
             if (newX < 0 || newX >= TableWidth || newY < 0 || newY >= TableHeight)
             {
-                return "Fallen off table";
+                return "Robot has fallen off the table";
             }
 
             this.X = newX;
@@ -178,7 +178,12 @@ namespace ToyRobotTest.Services
         /// </summary>
         private string Report()
         {
-            return $"{this.X},{this.Y},{this.Orientation}";
+            if (!this.IsPlacedOnTable) 
+            { 
+                return null; 
+            }
+
+            return $"{this.X},{this.Y},{this.Orientation.ToString().ToUpper()}";
         }
 
         /// <summary>
@@ -187,6 +192,11 @@ namespace ToyRobotTest.Services
         /// <returns>The result of the specified command.</returns>
         public string ProcessCommand(string commandText)
         {
+            if (commandText.Length == 0)
+            {
+                return null;
+            }
+
             string[] commandParts = commandText.Split(' ');
 
             if (commandParts.Length == 0)
